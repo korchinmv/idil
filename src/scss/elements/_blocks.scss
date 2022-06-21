@@ -1,0 +1,97 @@
+.logo {
+	outline: transparent;
+	transition: all 0.3s ease 0s;
+	border-radius: 50%;
+
+	&:focus {
+		box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+	}
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+.social-list {
+	display: flex;
+
+	&__item {
+		&:not(:last-child) {
+			margin-right: 25px;
+		}
+	}
+
+	&__link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		outline: transparent;
+
+		&:focus {
+			svg {
+				fill: var(--pink);
+			}
+		}
+
+		&:hover {
+			svg {
+				fill: var(--dark-grey-color);
+			}
+		}
+
+		svg {
+			transition: fill 0.3s ease 0s;
+			width: 24px;
+			height: 24px;
+			fill: var(--white-color);
+		}
+	}
+}
+
+.switch-color {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&:focus {
+		svg {
+			fill: var(--pink);
+		}
+	}
+
+	&:hover {
+		svg {
+			fill: var(--dark-grey-color);
+		}
+	}
+
+	svg {
+		width: 24px;
+		height: 24px;
+		fill: var(--white-color);
+		transition: fill 0.3s ease 0s;
+	}
+}
+
+.menu {
+	display: flex;
+
+	&__item {
+		&:not(:last-child) {
+			margin-right: 50px;
+		}
+	}
+
+	&__link {
+		transition: color 0.3s ease 0s;
+		outline: transparent;
+
+		&:focus {
+			color: var(--red-hover);
+		}
+
+		&:hover {
+			color: var(--accent-color);
+		}
+	}
+}

@@ -1,0 +1,77 @@
+.header {
+	&__top {
+		font-family: "OpenSans";
+		font-weight: 400;
+		background-color: var(--accent-color);
+		padding: 12px 0;
+	}
+
+	&__top-wrapper {
+		color: var(--white-color);
+		display: flex;
+		font-size: 16px;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__adress {
+		margin-right: 20px;
+	}
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__switch-color {
+		margin-right: 55px;
+	}
+
+	&__link {
+		display: block;
+		margin-right: 55px;
+		transition: color 0.3s ease 0s;
+		outline: transparent;
+
+		&:focus {
+			color: var(--pink);
+		}
+
+		&:hover {
+			color: var(--dark-grey-color);
+		}
+	}
+
+	&__bottom {
+		background-color: var(--pink-light);
+		font-family: "OpenSans";
+		font-weight: 400;
+		padding: 5px 0;
+	}
+
+	&__bottom-wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__logo {
+	}
+	&__nav {
+	}
+	&__box {
+		display: flex;
+	}
+
+	&__search {
+		margin-right: 40px;
+	}
+	&__btn {
+	}
+}
+
+.btn {
+}
+.btn--transparent {
+}

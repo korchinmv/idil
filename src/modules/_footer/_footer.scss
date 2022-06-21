@@ -1,0 +1,103 @@
+.footer {
+	background-color: var(--accent-color);
+	color: var(--white-color);
+	font-size: 16px;
+	line-height: 1.2;
+	padding: 40px 0;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__item {
+		&:nth-child(1) {
+			max-width: 245px;
+			width: 100%;
+		}
+
+		&:nth-child(2) {
+			max-width: 225px;
+			width: 100%;
+		}
+
+		&:nth-child(3) {
+			max-width: 285px;
+			width: 100%;
+		}
+
+		&:nth-child(4) {
+			max-width: 225px;
+			width: 100%;
+		}
+
+		&:nth-child(2),
+		&:nth-child(3),
+		&:nth-child(4) {
+			margin-top: 10px;
+		}
+
+		&:not(:last-child) {
+			@include adaptiveValue("margin-right", 150, 50);
+		}
+	}
+
+	&__logo {
+		display: block;
+		margin: 0 0 25px -13px;
+	}
+
+	&__title {
+		font-size: 18px;
+		margin-bottom: 25px;
+	}
+
+	&__nav {
+		display: flex;
+	}
+
+	&__menu {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-right", 70, 20);
+		}
+	}
+
+	&__menu-item {
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__list-item {
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__social-list {
+		margin-bottom: 40px;
+	}
+
+	&__switch-color {
+		svg {
+			margin-right: 10px;
+		}
+	}
+}
+
+.copy {
+	display: block;
+	margin-bottom: 15px;
+}
+
+.politic,
+.footer__menu-link,
+.footer__link,
+.footer__switch-color {
+	outline: transparent;
+	transition: color 0.3s ease 0s;
+
+	&:focus {
+		color: var(--pink);
+	}
+}

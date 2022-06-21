@@ -1,3 +1,53 @@
 .burger {
 	@include burger;
 }
+
+.search-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	outline: transparent;
+
+	&:focus {
+		svg {
+			fill: var(--red-hover);
+		}
+	}
+
+	&:hover {
+		svg {
+			fill: var(--red-hover);
+		}
+	}
+
+	svg {
+		width: 24px;
+		height: 24px;
+		fill: var(--accent-color);
+		transition: fill 0.3s ease 0s;
+	}
+}
+
+.btn {
+	padding: 17px 60px;
+	border: 1px solid transparent;
+	border-radius: 50px;
+
+	&--transparent {
+		padding: 13px 40px;
+		border-color: var(--accent-color);
+		transition: color 0.3s ease 0s, background-color 0.3s ease 0s, box-shadow 0.3s ease 0s;
+		outline: transparent;
+
+		&:focus {
+			color: var(--white-color);
+			background-color: var(--red-hover);
+			box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+		}
+
+		&:hover {
+			color: var(--white-color);
+			background-color: var(--accent-color);
+		}
+	}
+}
