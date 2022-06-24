@@ -5,80 +5,178 @@
 	line-height: 1.2;
 	padding: 40px 0;
 
+	@include mq("phone", max) {
+		padding: 20px 0;
+	}
+
 	&__wrapper {
 		display: flex;
 		justify-content: space-between;
+
+		@include mq("tablet", max) {
+			flex-direction: column;
+		}
 	}
 
 	&__item {
+		@include mq("tablet", max) {
+			&:not(:last-child) {
+				margin-bottom: 40px;
+			}
+		}
+
+		@include mq("phone", max) {
+			&:not(:last-child) {
+				margin-bottom: 30px;
+			}
+		}
+
 		&:nth-child(1) {
 			max-width: 245px;
 			width: 100%;
+
+			@include mq("tablet", max) {
+				display: flex;
+				align-items: center;
+				flex-wrap: wrap;
+				max-width: 100%;
+			}
 		}
 
 		&:nth-child(2) {
 			max-width: 225px;
 			width: 100%;
+
+			@include mq("tablet", max) {
+				max-width: 100%;
+			}
 		}
 
 		&:nth-child(3) {
 			max-width: 285px;
 			width: 100%;
+
+			@include mq("tablet", max) {
+				max-width: 100%;
+			}
 		}
 
 		&:nth-child(4) {
 			max-width: 225px;
 			width: 100%;
+
+			@include mq("tablet", max) {
+				display: flex;
+				flex-direction: column;
+				max-width: 100%;
+			}
 		}
 
 		&:nth-child(2),
 		&:nth-child(3),
 		&:nth-child(4) {
 			margin-top: 10px;
+
+			@include mq("tablet", max) {
+				margin-top: 0;
+			}
 		}
 
 		&:not(:last-child) {
 			@include adaptiveValue("margin-right", 150, 50);
+
+			@include mq("tablet", max) {
+				margin-right: 0;
+			}
 		}
 	}
 
 	&__logo {
 		display: block;
 		margin: 0 0 25px -13px;
+
+		@include mq("tablet", max) {
+			margin: 0 20px 0 -13px;
+		}
 	}
 
 	&__title {
 		font-size: 18px;
 		margin-bottom: 25px;
+
+		@include mq("tablet", max) {
+			margin-bottom: 15px;
+		}
 	}
 
 	&__nav {
 		display: flex;
+
+		@include mq("tablet", max) {
+			flex-direction: column;
+		}
 	}
 
 	&__menu {
+		@include mq("tablet", max) {
+			display: flex;
+		}
+
 		&:not(:last-child) {
 			@include adaptiveValue("margin-right", 70, 20);
+
+			@include mq("tablet", max) {
+				margin-right: 0;
+				&:not(:last-child) {
+					margin-bottom: 10px;
+				}
+			}
 		}
 	}
 
 	&__menu-item {
+		@include mq("tablet", max) {
+			&:not(:last-child) {
+				margin-right: 10px;
+			}
+		}
+
 		&:not(:last-child) {
 			margin-bottom: 15px;
+
+			@include mq("tablet", max) {
+				margin-bottom: 0;
+			}
 		}
 	}
 
 	&__list-item {
 		&:not(:last-child) {
 			margin-bottom: 15px;
+
+			@include mq("phone", max) {
+				margin-bottom: 10px;
+			}
 		}
 	}
 
 	&__social-list {
 		margin-bottom: 40px;
+
+		@include mq("tablet", max) {
+			margin-bottom: 0;
+			order: 3;
+			margin: 0 auto;
+		}
 	}
 
 	&__switch-color {
+		@include mq("tablet", max) {
+			margin-bottom: 10px;
+			align-self: flex-start;
+			order: 2;
+		}
+
 		svg {
 			margin-right: 10px;
 		}
@@ -88,6 +186,10 @@
 .copy {
 	display: block;
 	margin-bottom: 15px;
+
+	@include mq("tablet", max) {
+		margin: 0 20px 0 0;
+	}
 }
 
 .politic,
