@@ -32,12 +32,12 @@
 	padding: 17px 60px;
 	border: 1px solid transparent;
 	border-radius: 50px;
+	outline: transparent;
 
 	&--transparent {
 		padding: 13px 40px;
 		border-color: var(--accent-color);
 		transition: color 0.3s ease 0s, background-color 0.3s ease 0s, box-shadow 0.3s ease 0s;
-		outline: transparent;
 
 		&:focus {
 			color: var(--white-color);
@@ -48,6 +48,21 @@
 		&:hover {
 			color: var(--white-color);
 			background-color: var(--accent-color);
+		}
+	}
+
+	&--red {
+		color: var(--white-color);
+		background-color: var(--accent-color);
+		padding: 17px 60px;
+		transition: background-color 0.3s ease 0s, box-shadow 0.3s ease 0s;
+
+		&:focus {
+			box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+		}
+
+		&:hover {
+			background-color: var(--red-hover);
 		}
 	}
 }
