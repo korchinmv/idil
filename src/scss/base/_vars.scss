@@ -9,6 +9,7 @@
 
 	// colors
 	--accent-color: #de596d;
+	--bg-color: #fff;
 	--red-hover: #bc1340;
 	--black-color: #161516;
 	--dark-grey-color: #222022;
@@ -17,4 +18,13 @@
 	--pink-light: #fff4f8;
 	--white-color: #fff;
 	--grey-border: #cac8ca;
+}
+
+:root[data-theme="dark"] {
+	--bg-color: #38444c;
+	--accent-color: #293238;
+	--red-hover: #de596d;
+	--pink-light: #697278;
+	--pink-color: #5c5858;
+	--black-color: #fff;
 }

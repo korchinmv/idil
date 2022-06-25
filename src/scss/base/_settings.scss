@@ -4,6 +4,7 @@ body {
 }
 
 body {
+	background-color: var(--bg-color);
 	color: var(--black-color);
 	display: flex;
 	flex-direction: column;
