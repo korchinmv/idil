@@ -1,0 +1,10 @@
+.title {
+	font-family: "OpenSans";
+	font-weight: 400;
+	font-size: 38px;
+	line-height: 1.2;
+
+	@include mq("phone", max) {
+		font-size: 28px;
+	}
+}

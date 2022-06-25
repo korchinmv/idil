@@ -179,3 +179,80 @@
 		font-weight: 500;
 	}
 }
+
+.price-table {
+	border-collapse: collapse;
+	width: 100%;
+
+	@include mq("tablet-s", max) {
+		font-size: 13px;
+	}
+
+	th {
+		padding: 30px 0;
+
+		@include mq("tablet-s", max) {
+			padding: 20px 0;
+		}
+	}
+
+	&__title {
+		border-bottom: 1px solid var(--grey-border);
+		font-family: "OpenSans";
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 1.2;
+		margin-bottom: 15px;
+		padding-bottom: 15px;
+		text-align: left;
+
+		@include mq("phone", max) {
+			font-size: 18px;
+		}
+	}
+
+	&__line {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 1px solid var(--grey-border);
+	}
+
+	&__name {
+		font-family: "SourceSansPro";
+		font-weight: 400;
+		line-height: 1.5;
+		text-align: left;
+		max-width: 645px;
+		width: 100%;
+		margin-right: 10px;
+
+		@include mq("phone", max) {
+			margin-right: 7px;
+		}
+	}
+
+	&__time,
+	&__price {
+		margin-right: 10px;
+		flex-shrink: 0;
+
+		@include mq("phone", max) {
+			flex-shrink: 1;
+			margin-right: 7px;
+		}
+	}
+
+	&__time {
+		font-weight: 400;
+	}
+
+	&__link {
+		padding: 13px 40px;
+
+		@include mq("phone", max) {
+			padding: 8px 10px;
+			font-size: 11px;
+		}
+	}
+}

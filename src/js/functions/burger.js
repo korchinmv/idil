@@ -33,6 +33,7 @@ searchBtn.onclick = function () {
 inputBtn.onclick = function () {
 	searchInput.classList.remove('header__search-input--active');
 	buttonMenu.classList.remove('burger--active');
+	bodyLock.classList.remove('lock');
 };
 
 buttonMenu.addEventListener('click', (e) => {
