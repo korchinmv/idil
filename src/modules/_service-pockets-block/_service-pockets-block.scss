@@ -1,0 +1,35 @@
+.service-pockets-block {
+	background-color: var(--accent-color);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: cover 50%;
+	padding: 105px 0 430px;
+
+	@include mq("tablet-s", max) {
+		padding: 80px 0 330px;
+	}
+
+	@include mq("phone", max) {
+		padding: 50px 0 150px;
+	}
+
+	&__title {
+		color: var(--white-color);
+		text-align: center;
+		margin-bottom: 55px;
+		display: flex;
+		justify-content: center;
+
+		@include mq("phone-s", max) {
+			margin-bottom: 40px;
+		}
+
+		svg {
+			align-self: flex-end;
+			fill: var(--white-color);
+			margin-left: 20px;
+			height: 33px;
+			width: 25px;
+		}
+	}
+}

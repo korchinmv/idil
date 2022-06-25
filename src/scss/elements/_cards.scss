@@ -1,0 +1,70 @@
+.service-pocket {
+	background-color: var(--white-color);
+	padding: 40px;
+	text-align: center;
+
+	@include mq("phone-s", max) {
+		padding: 20px;
+	}
+
+	&__title {
+		font-family: "SourceSansPro";
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 1.2;
+		padding-bottom: 8px;
+		position: relative;
+		margin-bottom: 8px;
+
+		&:after {
+			content: "";
+			display: block;
+			width: 120px;
+			height: 1px;
+			background-color: var(--accent-color);
+			margin: 0 auto;
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+
+	&__descr {
+		margin-bottom: 30px;
+
+		@include mq("phone-s", max) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__price-new,
+	&__price-old {
+		display: block;
+	}
+
+	&__price-new {
+		font-weight: 600;
+		font-size: 30px;
+		line-height: 1.2;
+		margin-bottom: 5px;
+	}
+
+	&__price-old {
+		font-weight: 400;
+		text-decoration: line-through;
+		margin-bottom: 30px;
+
+		@include mq("phone-s", max) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__link {
+		display: block;
+
+		@include mq("phone-s", max) {
+			padding: 13px 40px;
+		}
+	}
+}
