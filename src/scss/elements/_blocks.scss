@@ -314,3 +314,55 @@
 		}
 	}
 }
+
+.advantages {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+
+	@include mq("desktop", max) {
+		justify-content: center;
+	}
+
+	&__item {
+		max-width: 265px;
+		width: 100%;
+		text-align: center;
+		margin: 0 15px;
+
+		@include mq("desktop", max) {
+			margin-bottom: 40px;
+		}
+
+		@include mq("phone", max) {
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__box {
+		background-color: var(--pink-light);
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 88px;
+		height: 88px;
+		margin: 0 auto 15px auto;
+	}
+
+	&__name {
+		font-size: 20px;
+		margin-bottom: 5px;
+
+		@include mq("phone", max) {
+			font-size: 18px;
+		}
+	}
+
+	&__descr {
+		font-size: 16px;
+	}
+}
