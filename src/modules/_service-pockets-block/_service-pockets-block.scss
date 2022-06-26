@@ -17,19 +17,9 @@
 		color: var(--white-color);
 		text-align: center;
 		margin-bottom: 55px;
-		display: flex;
-		justify-content: center;
 
 		@include mq("phone-s", max) {
 			margin-bottom: 40px;
-		}
-
-		svg {
-			align-self: flex-end;
-			fill: var(--white-color);
-			margin-left: 20px;
-			height: 33px;
-			width: 25px;
 		}
 	}
 }

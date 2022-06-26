@@ -225,10 +225,10 @@
 	}
 
 	&__line {
+		border-bottom: 1px solid var(--grey-border);
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		border-bottom: 1px solid var(--grey-border);
 
 		&:first-child {
 			border-top: 1px solid var(--grey-border);
@@ -286,5 +286,31 @@
 	@include mq("tablet-s", max) {
 		grid-template-columns: repeat(1, 1fr);
 		gap-row: 20px;
+	}
+}
+
+.stocks {
+	display: flex;
+	justify-content: space-between;
+
+	@include mq("tablet", max) {
+		flex-direction: column;
+	}
+
+	&__item {
+		max-width: 455px;
+		width: 100%;
+
+		@include mq("tablet", max) {
+			max-width: 100%;
+		}
+
+		&:not(:last-child) {
+			margin-right: 15px;
+
+			@include mq("tablet", max) {
+				margin: 0 0 30px 0;
+			}
+		}
 	}
 }
