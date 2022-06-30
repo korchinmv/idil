@@ -1,0 +1,67 @@
+.slider-scroll {
+	padding-bottom: 120px;
+	overflow: hidden;
+
+	@include mq("desktop-s", max) {
+		padding-bottom: 100px;
+	}
+
+	@include mq("tablet", max) {
+		padding-bottom: 80px;
+	}
+
+	@include mq("phone", max) {
+		padding-bottom: 60px;
+	}
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@include mq("tablet", max) {
+			flex-direction: column;
+		}
+	}
+
+	&__box {
+		max-width: 270px;
+		width: 100%;
+
+		@include adaptiveValue("margin-right", 90, 15);
+
+		@include mq("tablet", max) {
+			max-width: 100%;
+			margin-bottom: 30px;
+		}
+
+		@include mq("phone", max) {
+			margin-right: 0;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 40px;
+
+		@include mq("tablet", max) {
+			margin-bottom: 10px;
+		}
+	}
+
+	&__btn-box {
+		display: flex;
+
+		@include mq("tablet", max) {
+			justify-content: center;
+		}
+	}
+
+	&__btn {
+		width: 55px;
+
+		&:not(:last-child) {
+			margin-right: 15px;
+		}
+	}
+}

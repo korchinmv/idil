@@ -1,8 +1,12 @@
 .advantages-block {
 	padding: 120px 0;
 
+	@include mq("desktop-s", max) {
+		padding: 90px 0 50px;
+	}
+
 	@include mq("tablet-s", max) {
-		padding: 80px 0;
+		padding: 80px 0 50px;
 	}
 
 	&__title {
