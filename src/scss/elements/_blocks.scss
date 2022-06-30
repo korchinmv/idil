@@ -329,11 +329,7 @@
 		max-width: 265px;
 		width: 100%;
 		text-align: center;
-		margin: 0 15px;
-
-		@include mq("desktop", max) {
-			margin-bottom: 40px;
-		}
+		margin: 0 15px 40px 15px;
 
 		@include mq("phone", max) {
 			&:last-child {

@@ -54,6 +54,12 @@
 	left: 0;
 	bottom: 0;
 
+	&--white {
+		.swiper-scrollbar-drag {
+			background-color: var(--dark-grey-color);
+		}
+	}
+
 	@include mq("desktop", max) {
 		max-width: 600px;
 	}
