@@ -1,4 +1,4 @@
-import Swiper, { Navigation, Scrollbar, Lazy } from 'swiper';
+import Swiper, { Navigation, Scrollbar, Lazy, Pagination } from 'swiper';
 function initSliders() {
 	if (document.querySelector('.slider-care')) {
 		new Swiper('.slider-care', {
@@ -41,6 +41,52 @@ function initSliders() {
 			},
 
 			// События
+			on: {
+
+			}
+		});
+	}
+
+	if (document.querySelector('.reviews-slider')) {
+		new Swiper('.reviews-slider', {
+			modules: [Navigation, Lazy, Pagination],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 4,
+			spaceBetween: 24,
+			slidesPerGroup: 1,
+			autoHeight: false,
+			speed: 800,
+			lazy: true,
+
+			navigation: {
+				prevEl: '.slider-button-prev',
+				nextEl: '.slider-button-next',
+			},
+
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'bullets',
+			},
+
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 20,
+				},
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				992: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				1230: {
+					slidesPerView: 4,
+					spaceBetween: 24,
+				}
+			},
 			on: {
 
 			}

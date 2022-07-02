@@ -51,18 +51,8 @@
 	}
 
 	&__btn-box {
-		display: flex;
-
 		@include mq("tablet", max) {
 			justify-content: center;
-		}
-	}
-
-	&__btn {
-		width: 55px;
-
-		&:not(:last-child) {
-			margin-right: 15px;
 		}
 	}
 

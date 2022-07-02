@@ -362,3 +362,15 @@
 		font-size: 16px;
 	}
 }
+
+.slider-btns {
+	display: flex;
+
+	&__btn {
+		width: 55px;
+
+		&:not(:last-child) {
+			margin-right: 15px;
+		}
+	}
+}

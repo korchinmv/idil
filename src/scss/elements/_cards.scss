@@ -150,3 +150,61 @@
 		padding: 13px 35px;
 	}
 }
+
+.review {
+	background-color: rgba(255, 255, 255, 0.7);
+	padding: 30px;
+
+	@include mq("phone", max) {
+		padding: 16px;
+	}
+
+	&__time,
+	&__name {
+		display: block;
+		font-weight: 300;
+		line-height: 1.2;
+	}
+
+	&__time {
+		font-size: 16px;
+		line-height: 1.3;
+		margin-bottom: 10px;
+	}
+
+	&__name {
+		font-weight: 500;
+		margin-bottom: 25px;
+
+		@include mq("phone", max) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__feedback {
+		margin-bottom: 15px;
+	}
+
+	&__email,
+	&__show-more {
+		font-family: "OpenSans";
+		font-weight: 400;
+		text-decoration: underline;
+	}
+
+	&__email {
+		display: inline-block;
+		margin-bottom: 30px;
+	}
+
+	&__show-more {
+		color: var(--pink);
+		transition: color 0.3s ease 0s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--red-hover);
+			}
+		}
+	}
+}
