@@ -1,0 +1,46 @@
+.procedure-block {
+	&__title {
+		margin-bottom: 55px;
+
+		@include mq("desktop", max) {
+			margin-bottom: 45px;
+		}
+
+		@include mq("tablet", max) {
+			margin-bottom: 35px;
+		}
+
+		@include mq("phone", max) {
+			margin-bottom: 25px;
+		}
+
+		@include mq("phone-s", max) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__video {
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0 auto;
+		max-width: 935px;
+		height: 515px;
+		width: 100%;
+
+		@include mq("tablet", max) {
+			height: 350px;
+		}
+
+		@include mq("phone", max) {
+			height: 300px;
+		}
+
+		@include mq("phone-s", max) {
+			height: 250px;
+		}
+	}
+}
