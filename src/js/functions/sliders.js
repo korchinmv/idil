@@ -92,6 +92,52 @@ function initSliders() {
 			}
 		});
 	}
+
+	if (document.querySelector('.specialists-slider')) {
+		new Swiper('.specialists-slider', {
+			modules: [Navigation, Lazy, Pagination],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 4,
+			spaceBetween: 24,
+			slidesPerGroup: 1,
+			autoHeight: false,
+			speed: 800,
+			lazy: true,
+
+			navigation: {
+				prevEl: '.slider-button-prev',
+				nextEl: '.slider-button-next',
+			},
+
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'bullets',
+			},
+
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 20,
+				},
+				560: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				768: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				992: {
+					slidesPerView: 4,
+					spaceBetween: 24,
+				},
+			},
+			on: {
+
+			}
+		});
+	}
 }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
 function initSlidersScroll() {

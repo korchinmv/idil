@@ -38,10 +38,10 @@
 			width: 100%;
 		}
 	}
-}
 
-.swiper-wrapper {
-	margin-bottom: 30px;
+	.swiper-wrapper {
+		margin-bottom: 30px;
+	}
 }
 
 .slider-scrollbar {
@@ -71,4 +71,13 @@
 
 .swiper-scrollbar-drag {
 	background-color: var(--accent-color);
+}
+
+.specialists-slider {
+	max-width: 1415px;
+	width: 100%;
+
+	@include mq("phone", max) {
+		padding-bottom: 30px;
+	}
 }

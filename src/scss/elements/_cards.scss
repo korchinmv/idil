@@ -208,3 +208,41 @@
 		}
 	}
 }
+
+.specialists-card {
+	&__link {
+		display: block;
+		width: 100%;
+		height: 100%;
+
+		@media (any-hover: hover) {
+			&:hover {
+				.specialists-card__name {
+					color: var(--accent-color);
+				}
+			}
+		}
+	}
+
+	&__img {
+		object-fit: contain;
+		margin-bottom: 25px;
+
+		@include mq("phone", max) {
+			margin-bottom: 15px;
+			height: 250px;
+			width: 100%;
+		}
+	}
+
+	&__name {
+		font-size: 24px;
+		line-height: 1.2;
+		margin-bottom: 10px;
+		transition: color 0.2s ease 0s;
+
+		@include mq("phone", max) {
+			text-align: center;
+		}
+	}
+}
