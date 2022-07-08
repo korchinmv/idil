@@ -399,8 +399,92 @@
 		}
 	}
 
-	.open .about-block__btn {
+	.open .accordion__btn {
 		color: var(--accent-color);
+	}
+
+	&--white {
+		.accordion__item {
+			&:not(:last-child) {
+				margin-bottom: 15px;
+			}
+		}
+
+		.accordion__btn {
+			background-color: var(--white-color);
+			padding: 25px 30px;
+			position: relative;
+			padding-right: 85px;
+			width: 100%;
+			transition: color 0.2s ease 0s;
+
+			@media (any-hover: hover) {
+				&:hover {
+					color: var(--accent-color);
+				}
+			}
+
+			@include mq("phone", max) {
+				padding: 15px 35px 15px 20px;
+			}
+
+			&:after {
+				content: "";
+				display: block;
+				width: 24px;
+				height: 24px;
+				background-color: var(--accent-color);
+				background-image: url(../images/icons/icon-arrow-up.svg);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: 10px 13px;
+				border-radius: 50%;
+				transition: transform 0.3s;
+				position: absolute;
+				right: 32px;
+				top: 30px;
+
+				@include mq("phone", max) {
+					right: 22px;
+					top: 50%;
+					transform: translateY(-50%);
+				}
+			}
+		}
+
+		.accordion__name {
+			display: block;
+			font-size: 18px;
+			font-weight: 500;
+			text-align: left;
+			max-width: 550px;
+			width: 100%;
+
+			@include mq("phone", max) {
+				font-size: 17px;
+				line-height: 1.2;
+			}
+		}
+
+		.accordion__content {
+			max-width: 700px;
+			width: 100%;
+
+			@include mq("desktop-s", max) {
+				max-width: 100%;
+			}
+
+			p {
+				background-color: var(--white-color);
+				font-family: "SourceSansPro";
+				font-weight: 300;
+				padding: 0 30px 25px 30px;
+
+				@include mq("phone", max) {
+					padding: 0 20px 15px 20px;
+				}
+			}
+		}
 	}
 }
 
