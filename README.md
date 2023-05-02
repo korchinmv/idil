@@ -9,7 +9,7 @@
 - Gulp
 - адаптивная верстка
 
-- [Ссылка на проект] korchinmv.github.io/idil
+- [Ссылка на проект] https://korchinmv.github.io/idil
 
 **О проекте**
 
